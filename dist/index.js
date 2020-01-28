@@ -113,7 +113,7 @@ function (_React$Component) {
           return d.reportDate;
         }), function (d) {
           return -d.reportDate;
-        }).reverse();
+        });
         return data.map(function (d, i) {
           var qq = ~~d.reportDate.slice(5, 7);
           var yy = d.reportDate.slice(0, 4);
@@ -150,7 +150,7 @@ function (_React$Component) {
 
       var data = calculateBalanceSheets(_lodash["default"].get(profile, 'balance_sheet.data', []));
       var unit = _lodash["default"].get(data, '0.unit') || 'million';
-      var arr = data.slice(-4);
+      var arr = data.slice(0, 4).reverse();
       return _react["default"].createElement("div", {
         style: {
           width: '100%',

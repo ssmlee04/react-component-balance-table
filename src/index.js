@@ -54,7 +54,7 @@ export class Analyst extends React.Component {
       }
       data = _.sortBy(data.filter(d => d.reportDate), (d) => {
         return -d.reportDate;
-      }).reverse();
+      });
 
       return data.map((d, i) => {
         const qq = ~~d.reportDate.slice(5, 7);
@@ -94,7 +94,7 @@ export class Analyst extends React.Component {
 
     const data = calculateBalanceSheets(_.get(profile, 'balance_sheet.data', []));
     const unit = _.get(data, '0.unit') || 'million';
-    const arr = data.slice(-4);
+    const arr = data.slice(0, 4).reverse();
 
     return (
       <div style={{ width: '100%', padding: 5, fontSize: 12 }}>
