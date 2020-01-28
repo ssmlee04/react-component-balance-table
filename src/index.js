@@ -137,14 +137,14 @@ export class Analyst extends React.Component {
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].goodwill && parseFloat(arr[3].goodwill).toFixed(2)}</td>
             </tr>
             <tr>
-              <td>Current Assets</td>
+              <td className='green'>Current Assets</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].currentAssets && parseFloat(arr[0].currentAssets).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].currentAssets && parseFloat(arr[1].currentAssets).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].currentAssets && parseFloat(arr[2].currentAssets).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].currentAssets && parseFloat(arr[3].currentAssets).toFixed(2)}</td>
             </tr>
             <tr>
-              <td>Current Cash</td>
+              <td className='green'>Current Cash</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].currentCash && parseFloat(arr[0].currentCash).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].currentCash && parseFloat(arr[1].currentCash).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].currentCash && parseFloat(arr[2].currentCash).toFixed(2)}</td>
@@ -172,14 +172,14 @@ export class Analyst extends React.Component {
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].inventory && parseFloat(arr[3].inventory).toFixed(2)}</td>
             </tr>
             <tr>
-              <td>Total Liabilities</td>
+              <td className='red'>Total Liabilities</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].totalLiabilities && parseFloat(arr[0].totalLiabilities).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].totalLiabilities && parseFloat(arr[1].totalLiabilities).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].totalLiabilities && parseFloat(arr[2].totalLiabilities).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].totalLiabilities && parseFloat(arr[3].totalLiabilities).toFixed(2)}</td>
             </tr>
             <tr>
-              <td>Long Term Debt</td>
+              <td className='red'>Long Term Debt</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].longTermDebt && parseFloat(arr[0].longTermDebt).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].longTermDebt && parseFloat(arr[1].longTermDebt).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].longTermDebt && parseFloat(arr[2].longTermDebt).toFixed(2)}</td>
