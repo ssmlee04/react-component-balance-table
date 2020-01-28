@@ -274,7 +274,11 @@ function (_React$Component) {
         className: "bg-lightgray-ultra-3"
       }, arr[2] && arr[2].longTermDebt && parseFloat(arr[2].longTermDebt).toFixed(2)), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].longTermDebt && parseFloat(arr[3].longTermDebt).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", null, "Current Long", _react["default"].createElement("br", null), " Term Debt"), _react["default"].createElement("td", {
+      }, arr[3] && arr[3].longTermDebt && parseFloat(arr[3].longTermDebt).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
+        style: {
+          fontSize: 10
+        }
+      }, "Current Long", _react["default"].createElement("br", null), " Term Debt"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
       }, arr[0] && arr[0].currentLongTermDebt && parseFloat(arr[0].currentLongTermDebt).toFixed(2)), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"

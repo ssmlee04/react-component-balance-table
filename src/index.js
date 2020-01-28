@@ -186,7 +186,7 @@ export class Analyst extends React.Component {
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].longTermDebt && parseFloat(arr[3].longTermDebt).toFixed(2)}</td>
             </tr>
             <tr>
-              <td>Current Long<br /> Term Debt</td>
+              <td style={{fontSize: 10}}>Current Long<br /> Term Debt</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].currentLongTermDebt && parseFloat(arr[0].currentLongTermDebt).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].currentLongTermDebt && parseFloat(arr[1].currentLongTermDebt).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].currentLongTermDebt && parseFloat(arr[2].currentLongTermDebt).toFixed(2)}</td>
