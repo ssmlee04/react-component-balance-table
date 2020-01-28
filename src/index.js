@@ -110,17 +110,17 @@ export class Analyst extends React.Component {
           <tbody>
             <tr>
               <td className='bold'>Total Assets</td>
-              <td className='bg-lightgray-ultra-5'>{arr[3] && arr[3].totalAssets && parseFloat(arr[3].totalAssets).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-4'>{arr[2] && arr[2].totalAssets && parseFloat(arr[2].totalAssets).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-3'>{arr[1] && arr[1].totalAssets && parseFloat(arr[1].totalAssets).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-2'>{arr[0] && arr[0].totalAssets && parseFloat(arr[0].totalAssets).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].totalAssets && parseFloat(arr[0].totalAssets).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].totalAssets && parseFloat(arr[1].totalAssets).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].totalAssets && parseFloat(arr[2].totalAssets).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].totalAssets && parseFloat(arr[3].totalAssets).toFixed(2)}</td>
             </tr>
             <tr>
               <td>Other Assets</td>
-              <td className='bg-lightgray-ultra-5'>{arr[3] && arr[3].otherAssets && parseFloat(arr[3].otherAssets).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-4'>{arr[2] && arr[2].otherAssets && parseFloat(arr[2].otherAssets).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-3'>{arr[1] && arr[1].otherAssets && parseFloat(arr[1].otherAssets).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-2'>{arr[0] && arr[0].otherAssets && parseFloat(arr[0].otherAssets).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].otherAssets && parseFloat(arr[0].otherAssets).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].otherAssets && parseFloat(arr[1].otherAssets).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].otherAssets && parseFloat(arr[2].otherAssets).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].otherAssets && parseFloat(arr[3].otherAssets).toFixed(2)}</td>
             </tr>
             <tr>
               <td>Intangible Assets</td>
