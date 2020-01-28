@@ -180,21 +180,21 @@ function (_React$Component) {
         className: "bold"
       }, "Total Assets"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, arr[3] && arr[3].totalAssets && parseFloat(arr[3].totalAssets).toFixed(2)), _react["default"].createElement("td", {
+      }, arr[0] && arr[0].totalAssets && parseFloat(arr[0].totalAssets).toFixed(2)), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, arr[2] && arr[2].totalAssets && parseFloat(arr[2].totalAssets).toFixed(2)), _react["default"].createElement("td", {
-        className: "bg-lightgray-ultra-3"
       }, arr[1] && arr[1].totalAssets && parseFloat(arr[1].totalAssets).toFixed(2)), _react["default"].createElement("td", {
-        className: "bg-lightgray-ultra-2"
-      }, arr[0] && arr[0].totalAssets && parseFloat(arr[0].totalAssets).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", null, "Other Assets"), _react["default"].createElement("td", {
-        className: "bg-lightgray-ultra-5"
-      }, arr[3] && arr[3].otherAssets && parseFloat(arr[3].otherAssets).toFixed(2)), _react["default"].createElement("td", {
-        className: "bg-lightgray-ultra-4"
-      }, arr[2] && arr[2].otherAssets && parseFloat(arr[2].otherAssets).toFixed(2)), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, arr[1] && arr[1].otherAssets && parseFloat(arr[1].otherAssets).toFixed(2)), _react["default"].createElement("td", {
+      }, arr[2] && arr[2].totalAssets && parseFloat(arr[2].totalAssets).toFixed(2)), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[0] && arr[0].otherAssets && parseFloat(arr[0].otherAssets).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", null, "Intangible Assets"), _react["default"].createElement("td", {
+      }, arr[3] && arr[3].totalAssets && parseFloat(arr[3].totalAssets).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", null, "Other Assets"), _react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-5"
+      }, arr[0] && arr[0].otherAssets && parseFloat(arr[0].otherAssets).toFixed(2)), _react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-4"
+      }, arr[1] && arr[1].otherAssets && parseFloat(arr[1].otherAssets).toFixed(2)), _react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-3"
+      }, arr[2] && arr[2].otherAssets && parseFloat(arr[2].otherAssets).toFixed(2)), _react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-2"
+      }, arr[3] && arr[3].otherAssets && parseFloat(arr[3].otherAssets).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", null, "Intangible Assets"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
       }, arr[0] && arr[0].intangibleAssets && parseFloat(arr[0].intangibleAssets).toFixed(2)), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
