@@ -1,0 +1,41 @@
+div.react-components-show-button {
+    position: relative;
+}
+div.react-components-show-button:hover img{
+    opacity: 0.8;
+}
+div.react-components-show-button:hover button {
+    display: block;
+}
+div.react-components-show-button button {
+    position: absolute;
+    display: none;
+}
+div.react-components-show-button button.react-components-show-url {
+    top: 2px;
+    right: 2px;
+}
+.bg-lightgray-ultra-2 {
+  background-color: #ebebeb;
+}
+.bg-lightgray-ultra-3 {
+  background-color: #f1f1f1;
+}
+.bg-lightgray-ultra-4 {
+  background-color: #f6f6f6;
+}
+.bg-lightgray-ultra-5 {
+  background-color: #fafafa;
+}
+.bold {
+  font-weight: bold;
+}
+.lighter {
+  font-weight: lighter;
+}
+.green {
+  color: green;
+}
+.crimson {
+  color: crimson;
+}
