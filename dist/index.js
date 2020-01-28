@@ -112,7 +112,7 @@ function (_React$Component) {
         data = _lodash["default"].sortBy(data.filter(function (d) {
           return d.reportDate;
         }), function (d) {
-          return -d.reportDate;
+          return d.reportDate;
         });
         return data.map(function (d, i) {
           var qq = ~~d.reportDate.slice(5, 7);
@@ -150,7 +150,7 @@ function (_React$Component) {
 
       var data = calculateBalanceSheets(_lodash["default"].get(profile, 'balance_sheet.data', []));
       var unit = _lodash["default"].get(data, '0.unit') || 'million';
-      var arr = data.slice(0, 4).reverse();
+      var arr = data.slice(-4);
       return _react["default"].createElement("div", {
         style: {
           width: '100%',
