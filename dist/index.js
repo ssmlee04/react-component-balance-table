@@ -103,13 +103,13 @@ function (_React$Component) {
         var u = 'k';
         if (!data || !data.length) return data;
 
-        if (data[0].ta > 1000000) {
+        if (data[0].ta > 10000000) {
           divider = 1000000;
           unit = 'milllion';
           u = 'm';
         }
 
-        if (data[0].ta > 1000000000) {
+        if (data[0].ta > 10000000000) {
           divider = 1000000000;
           unit = 'billion';
           u = 'b';
