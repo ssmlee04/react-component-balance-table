@@ -79,7 +79,7 @@ function (_React$Component) {
         return _react["default"].createElement("div", {
           className: "react-components-show-button"
         }, _react["default"].createElement("img", {
-          alt: "".concat(profile.ticker, " - ").concat(profile.name, " analyst opinions"),
+          alt: "".concat(profile.ticker, " - ").concat(profile.name, " balance sheets"),
           src: profile.balance_table.url,
           style: {
             width: '100%'
