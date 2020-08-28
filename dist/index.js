@@ -171,7 +171,9 @@ function (_React$Component) {
       }, _react["default"].createElement("div", {
         style: {
           color: 'darkred',
-          fontWeight: 'bold'
+          fontWeight: 'bold',
+          marginBottom: 2,
+          fontSize: 14
         }
       }, profile.ticker, " - ", profile.name), _react["default"].createElement("table", {
         className: "table table-sm"
