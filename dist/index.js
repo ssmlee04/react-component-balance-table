@@ -146,6 +146,7 @@ function (_React$Component) {
           d.totalAssets = d.ta / divider;
           d.otherAssets = d.oa / divider;
           d.intangibleAssets = d.ia / divider;
+          d.totalDebts = ((d.std || 0) + (d.ld || 0)) / divider;
           d.goodwill = d.gw / divider;
           d.currentAssets = d.ca / divider;
           d.currentCash = d.cc / divider;
@@ -154,7 +155,9 @@ function (_React$Component) {
           d.inventory = d.inv / divider;
           d.totalLiabilities = d.tl / divider;
           d.longTermDebt = d.ld / divider;
-          d.currentLongTermDebt = d.cld / divider;
+          d.totalCurrentLiabilities = d.tcl / divider;
+          d.debtRatio = d.totalDebts / d.totalAssets;
+          d.currentRatio = d.currentAssets / d.totalCurrentLiabilities;
           return d;
         });
       };
@@ -172,11 +175,19 @@ function (_React$Component) {
         style: {
           color: 'darkred',
           fontWeight: 'bold',
-          marginBottom: 2,
+          marginBottom: 5,
           fontSize: 14
         }
-      }, profile.ticker, " - ", profile.name), _react["default"].createElement("table", {
-        className: "table table-sm"
+      }, profile.ticker, " - ", profile.name, _react["default"].createElement("span", {
+        style: {
+          color: 'green',
+          marginLeft: 3
+        }
+      }, "Balance Sheets")), _react["default"].createElement("table", {
+        className: "table table-sm",
+        style: {
+          marginBottom: 0
+        }
       }, _react["default"].createElement("thead", {
         className: "bold"
       }, _react["default"].createElement("th", {
@@ -223,9 +234,7 @@ function (_React$Component) {
         className: "bg-lightgray-ultra-3"
       }, arr[2] && arr[2].goodwill && parseFloat(arr[2].goodwill).toFixed(2)), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].goodwill && parseFloat(arr[3].goodwill).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
-        className: "green"
-      }, "Current Assets"), _react["default"].createElement("td", {
+      }, arr[3] && arr[3].goodwill && parseFloat(arr[3].goodwill).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", null, "Current Assets"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
       }, arr[0] && arr[0].currentAssets && parseFloat(arr[0].currentAssets).toFixed(2)), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
@@ -233,9 +242,7 @@ function (_React$Component) {
         className: "bg-lightgray-ultra-3"
       }, arr[2] && arr[2].currentAssets && parseFloat(arr[2].currentAssets).toFixed(2)), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].currentAssets && parseFloat(arr[3].currentAssets).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
-        className: "green"
-      }, "Current Cash"), _react["default"].createElement("td", {
+      }, arr[3] && arr[3].currentAssets && parseFloat(arr[3].currentAssets).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", null, "Current Cash"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
       }, arr[0] && arr[0].currentCash && parseFloat(arr[0].currentCash).toFixed(2)), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
@@ -299,7 +306,27 @@ function (_React$Component) {
         className: "bg-lightgray-ultra-3"
       }, arr[2] && arr[2].currentLongTermDebt && parseFloat(arr[2].currentLongTermDebt).toFixed(2)), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].currentLongTermDebt && parseFloat(arr[3].currentLongTermDebt).toFixed(2))))));
+      }, arr[3] && arr[3].currentLongTermDebt && parseFloat(arr[3].currentLongTermDebt).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
+        className: "red"
+      }, "Current Ratio"), _react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-5"
+      }, arr[0] && arr[0].currentRatio && parseFloat(arr[0].currentRatio).toFixed(2)), _react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-4"
+      }, arr[1] && arr[1].currentRatio && parseFloat(arr[1].currentRatio).toFixed(2)), _react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-3"
+      }, arr[2] && arr[2].currentRatio && parseFloat(arr[2].currentRatio).toFixed(2)), _react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-2"
+      }, arr[3] && arr[3].currentRatio && parseFloat(arr[3].currentRatio).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
+        className: "red"
+      }, "Debt Ratio"), _react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-5"
+      }, arr[0] && arr[0].debtRatio && parseFloat(arr[0].debtRatio).toFixed(2)), _react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-4"
+      }, arr[1] && arr[1].debtRatio && parseFloat(arr[1].debtRatio).toFixed(2)), _react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-3"
+      }, arr[2] && arr[2].debtRatio && parseFloat(arr[2].debtRatio).toFixed(2)), _react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-2"
+      }, arr[3] && arr[3].debtRatio && parseFloat(arr[3].debtRatio).toFixed(2))))));
     }
   }]);
 
