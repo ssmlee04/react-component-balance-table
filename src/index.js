@@ -20,20 +20,20 @@ export class Analyst extends React.Component {
   }
 
   render() {
-    const { profile } = this.props;
+    const { profile, prop = 'balance_sheet', imgProp = 'balance_table' } = this.props;
     const { copied } = this.state;
     if (!profile) {
       return (
         <div style={{ fontSize: 12 }}>Not available at this time... </div>
       );
     }
-    if (profile.balance_table && profile.balance_table.url) {
+    if (profile[imgProp] && profile[imgProp].url) {
       const btnClass = copied ? 'react-components-show-url btn btn-sm btn-danger disabled font-10' : 'react-components-show-url btn btn-sm btn-warning font-10';
       const btnText = copied ? 'Copied' : 'Copy Img';
       return (
         <div className='react-components-show-button'>
-          <img alt={`${profile.ticker} - ${profile.name} balance sheets`} src={profile.balance_table.url} style={{ width: '100%' }} />
-          <CopyToClipboard text={profile.balance_table.url || ''}
+          <img alt={`${profile.ticker} - ${profile.name} balance sheets`} src={profile[imgProp].url} style={{ width: '100%' }} />
+          <CopyToClipboard text={profile[imgProp].url || ''}
             onCopy={() => this.setState({ copied: true })}
           >
             <button className={btnClass} value={btnText}>{btnText}</button>
@@ -97,7 +97,7 @@ export class Analyst extends React.Component {
     };
 
 
-    const data = calculateBalanceSheets(_.get(profile, 'balance_sheet.data', []));
+    const data = calculateBalanceSheets(_.get(profile, `${prop}.data`, []));
     const unit = _.get(data, '0.unit') || 'million';
     const arr = data.slice(-4);
 

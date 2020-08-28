@@ -62,7 +62,12 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      var profile = this.props.profile;
+      var _this$props = this.props,
+          profile = _this$props.profile,
+          _this$props$prop = _this$props.prop,
+          prop = _this$props$prop === void 0 ? 'balance_sheet' : _this$props$prop,
+          _this$props$imgProp = _this$props.imgProp,
+          imgProp = _this$props$imgProp === void 0 ? 'balance_table' : _this$props$imgProp;
       var copied = this.state.copied;
 
       if (!profile) {
@@ -73,19 +78,19 @@ function (_React$Component) {
         }, "Not available at this time... ");
       }
 
-      if (profile.balance_table && profile.balance_table.url) {
+      if (profile[imgProp] && profile[imgProp].url) {
         var btnClass = copied ? 'react-components-show-url btn btn-sm btn-danger disabled font-10' : 'react-components-show-url btn btn-sm btn-warning font-10';
         var btnText = copied ? 'Copied' : 'Copy Img';
         return _react["default"].createElement("div", {
           className: "react-components-show-button"
         }, _react["default"].createElement("img", {
           alt: "".concat(profile.ticker, " - ").concat(profile.name, " balance sheets"),
-          src: profile.balance_table.url,
+          src: profile[imgProp].url,
           style: {
             width: '100%'
           }
         }), _react["default"].createElement(_reactCopyToClipboard.CopyToClipboard, {
-          text: profile.balance_table.url || '',
+          text: profile[imgProp].url || '',
           onCopy: function onCopy() {
             return _this2.setState({
               copied: true
@@ -154,7 +159,7 @@ function (_React$Component) {
         });
       };
 
-      var data = calculateBalanceSheets(_lodash["default"].get(profile, 'balance_sheet.data', []));
+      var data = calculateBalanceSheets(_lodash["default"].get(profile, "".concat(prop, ".data"), []));
       var unit = _lodash["default"].get(data, '0.unit') || 'million';
       var arr = data.slice(-4);
       return _react["default"].createElement("div", {
