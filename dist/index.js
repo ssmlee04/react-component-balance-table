@@ -146,7 +146,6 @@ function (_React$Component) {
           d.totalAssets = d.ta / divider;
           d.otherAssets = d.oa / divider;
           d.intangibleAssets = d.ia / divider;
-          d.totalDebts = ((d.std || 0) + (d.ld || 0)) / divider;
           d.goodwill = d.gw / divider;
           d.currentAssets = d.ca / divider;
           d.currentCash = d.cc / divider;
@@ -155,6 +154,8 @@ function (_React$Component) {
           d.inventory = d.inv / divider;
           d.totalLiabilities = d.tl / divider;
           d.longTermDebt = d.ld / divider;
+          d.shortTermDebt = d.std / divider;
+          d.totalDebts = ((d.std || 0) + (d.ld || 0)) / divider;
           d.totalCurrentLiabilities = d.tcl / divider;
           d.debtRatio = d.totalDebts / d.totalAssets;
           d.currentRatio = d.currentAssets / d.totalCurrentLiabilities;
@@ -286,6 +287,16 @@ function (_React$Component) {
         className: "bg-lightgray-ultra-2"
       }, arr[3] && arr[3].totalLiabilities && parseFloat(arr[3].totalLiabilities).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "red"
+      }, "Short Term Debt"), _react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-5"
+      }, arr[0] && arr[0].shortTermDebt && parseFloat(arr[0].shortTermDebt).toFixed(2)), _react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-4"
+      }, arr[1] && arr[1].shortTermDebt && parseFloat(arr[1].shortTermDebt).toFixed(2)), _react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-3"
+      }, arr[2] && arr[2].shortTermDebt && parseFloat(arr[2].shortTermDebt).toFixed(2)), _react["default"].createElement("td", {
+        className: "bg-lightgray-ultra-2"
+      }, arr[3] && arr[3].shortTermDebt && parseFloat(arr[3].shortTermDebt).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
+        className: "red"
       }, "Long Term Debt"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
       }, arr[0] && arr[0].longTermDebt && parseFloat(arr[0].longTermDebt).toFixed(2)), _react["default"].createElement("td", {
@@ -295,18 +306,6 @@ function (_React$Component) {
       }, arr[2] && arr[2].longTermDebt && parseFloat(arr[2].longTermDebt).toFixed(2)), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
       }, arr[3] && arr[3].longTermDebt && parseFloat(arr[3].longTermDebt).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
-        style: {
-          fontSize: 10
-        }
-      }, "Current Long", _react["default"].createElement("br", null), " Term Debt"), _react["default"].createElement("td", {
-        className: "bg-lightgray-ultra-5"
-      }, arr[0] && arr[0].currentLongTermDebt && parseFloat(arr[0].currentLongTermDebt).toFixed(2)), _react["default"].createElement("td", {
-        className: "bg-lightgray-ultra-4"
-      }, arr[1] && arr[1].currentLongTermDebt && parseFloat(arr[1].currentLongTermDebt).toFixed(2)), _react["default"].createElement("td", {
-        className: "bg-lightgray-ultra-3"
-      }, arr[2] && arr[2].currentLongTermDebt && parseFloat(arr[2].currentLongTermDebt).toFixed(2)), _react["default"].createElement("td", {
-        className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].currentLongTermDebt && parseFloat(arr[3].currentLongTermDebt).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "red"
       }, "Current Ratio"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
