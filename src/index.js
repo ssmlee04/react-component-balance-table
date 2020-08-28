@@ -120,105 +120,105 @@ export class Analyst extends React.Component {
           </thead>
           <tbody>
             <tr>
-              <td className='bold'>Total Assets</td>
+              <td className='bold green'>Total Assets</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].totalAssets && parseFloat(arr[0].totalAssets).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].totalAssets && parseFloat(arr[1].totalAssets).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].totalAssets && parseFloat(arr[2].totalAssets).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].totalAssets && parseFloat(arr[3].totalAssets).toFixed(2)}</td>
             </tr>
             <tr>
-              <td>Other Assets</td>
+              <td className='green'>Other Assets</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].otherAssets && parseFloat(arr[0].otherAssets).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].otherAssets && parseFloat(arr[1].otherAssets).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].otherAssets && parseFloat(arr[2].otherAssets).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].otherAssets && parseFloat(arr[3].otherAssets).toFixed(2)}</td>
             </tr>
             <tr>
-              <td>Intangible Assets</td>
+              <td className='green'>Intangible Assets</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].intangibleAssets && parseFloat(arr[0].intangibleAssets).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].intangibleAssets && parseFloat(arr[1].intangibleAssets).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].intangibleAssets && parseFloat(arr[2].intangibleAssets).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].intangibleAssets && parseFloat(arr[3].intangibleAssets).toFixed(2)}</td>
             </tr>
             <tr>
-              <td>Goodwill</td>
+              <td className='green'>Goodwill</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].goodwill && parseFloat(arr[0].goodwill).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].goodwill && parseFloat(arr[1].goodwill).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].goodwill && parseFloat(arr[2].goodwill).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].goodwill && parseFloat(arr[3].goodwill).toFixed(2)}</td>
             </tr>
             <tr>
-              <td>Current Assets</td>
+              <td className='green'>Current Assets</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].currentAssets && parseFloat(arr[0].currentAssets).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].currentAssets && parseFloat(arr[1].currentAssets).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].currentAssets && parseFloat(arr[2].currentAssets).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].currentAssets && parseFloat(arr[3].currentAssets).toFixed(2)}</td>
             </tr>
             <tr>
-              <td>Current Cash</td>
+              <td className='green'>Current Cash</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].currentCash && parseFloat(arr[0].currentCash).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].currentCash && parseFloat(arr[1].currentCash).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].currentCash && parseFloat(arr[2].currentCash).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].currentCash && parseFloat(arr[3].currentCash).toFixed(2)}</td>
             </tr>
             <tr>
-              <td>Account Receivables</td>
+              <td className='green'>Account Receivables</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].receivables && parseFloat(arr[0].receivables).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].receivables && parseFloat(arr[1].receivables).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].receivables && parseFloat(arr[2].receivables).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].receivables && parseFloat(arr[3].receivables).toFixed(2)}</td>
             </tr>
             <tr>
-              <td>Inventory</td>
+              <td className='green'>Inventory</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].inventory && parseFloat(arr[0].inventory).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].inventory && parseFloat(arr[1].inventory).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].inventory && parseFloat(arr[2].inventory).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].inventory && parseFloat(arr[3].inventory).toFixed(2)}</td>
             </tr>
             <tr>
-              <td className='bold'>Total Liabilities</td>
+              <td className='bold red'>Total Liabilities</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].totalLiabilities && parseFloat(arr[0].totalLiabilities).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].totalLiabilities && parseFloat(arr[1].totalLiabilities).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].totalLiabilities && parseFloat(arr[2].totalLiabilities).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].totalLiabilities && parseFloat(arr[3].totalLiabilities).toFixed(2)}</td>
             </tr>
             <tr>
-              <td>Account Payables</td>
+              <td className='red'>Account Payables</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].accountsPayable && parseFloat(arr[0].accountsPayable).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].accountsPayable && parseFloat(arr[1].accountsPayable).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].accountsPayable && parseFloat(arr[2].accountsPayable).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].accountsPayable && parseFloat(arr[3].accountsPayable).toFixed(2)}</td>
             </tr>
             <tr>
-              <td>Short Term Debt</td>
+              <td className='red'>Short Term Debt</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].shortTermDebt && parseFloat(arr[0].shortTermDebt).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].shortTermDebt && parseFloat(arr[1].shortTermDebt).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].shortTermDebt && parseFloat(arr[2].shortTermDebt).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].shortTermDebt && parseFloat(arr[3].shortTermDebt).toFixed(2)}</td>
             </tr>
             <tr>
-              <td>Long Term Debt</td>
+              <td className='red'>Long Term Debt</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].longTermDebt && parseFloat(arr[0].longTermDebt).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].longTermDebt && parseFloat(arr[1].longTermDebt).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].longTermDebt && parseFloat(arr[2].longTermDebt).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].longTermDebt && parseFloat(arr[3].longTermDebt).toFixed(2)}</td>
             </tr>
             <tr>
-              <td className='green'>Current Ratio</td>
+              <td>Current Ratio</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].currentRatio && parseFloat(arr[0].currentRatio).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].currentRatio && parseFloat(arr[1].currentRatio).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].currentRatio && parseFloat(arr[2].currentRatio).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].currentRatio && parseFloat(arr[3].currentRatio).toFixed(2)}</td>
             </tr>
             <tr>
-              <td className='green'>Debt Ratio</td>
+              <td>Debt Ratio</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].debtRatio && parseFloat(arr[0].debtRatio).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].debtRatio && parseFloat(arr[1].debtRatio).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].debtRatio && parseFloat(arr[2].debtRatio).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].debtRatio && parseFloat(arr[3].debtRatio).toFixed(2)}</td>
             </tr>
             <tr>
-              <td className='green'>Debt/Equity Ratio</td>
+              <td>Debt/Equity Ratio</td>
               <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].debtToEquityRatio && parseFloat(arr[0].debtToEquityRatio).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].debtToEquityRatio && parseFloat(arr[1].debtToEquityRatio).toFixed(2)}</td>
               <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].debtToEquityRatio && parseFloat(arr[2].debtToEquityRatio).toFixed(2)}</td>
