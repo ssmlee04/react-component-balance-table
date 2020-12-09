@@ -358,7 +358,7 @@ function (_React$Component) {
         }
       }, "@earningsfly"), " with ", _react["default"].createElement("span", {
         style: {
-          fontSize: 8,
+          fontSize: 16,
           color: 'red'
         }
       }, "\u2764\uFE0F")));
