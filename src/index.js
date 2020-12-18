@@ -3,6 +3,10 @@ import _ from 'lodash';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import './../index.css';
 
+const lookup = (arr, idx, prop) => {
+  return parseFloat(_.get(arr, `${idx}.${prop}`, 0)).toFixed(2);
+};
+
 export class Analyst extends React.Component {
   constructor(props) {
     super(props);
@@ -121,108 +125,108 @@ export class Analyst extends React.Component {
           <tbody>
             <tr>
               <td className='bold green'>Total Assets</td>
-              <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].totalAssets && parseFloat(arr[0].totalAssets).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].totalAssets && parseFloat(arr[1].totalAssets).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].totalAssets && parseFloat(arr[2].totalAssets).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].totalAssets && parseFloat(arr[3].totalAssets).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-5'>{lookup(arr, 0, 'totalAssets')}</td>
+              <td className='bg-lightgray-ultra-4'>{lookup(arr, 1, 'totalAssets')}</td>
+              <td className='bg-lightgray-ultra-3'>{lookup(arr, 2, 'totalAssets')}</td>
+              <td className='bg-lightgray-ultra-2'>{lookup(arr, 3, 'totalAssets')}</td>
             </tr>
             <tr>
               <td className='green'>Other Assets</td>
-              <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].otherAssets && parseFloat(arr[0].otherAssets).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].otherAssets && parseFloat(arr[1].otherAssets).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].otherAssets && parseFloat(arr[2].otherAssets).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].otherAssets && parseFloat(arr[3].otherAssets).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-5'>{lookup(arr, 0, 'otherAssets')}</td>
+              <td className='bg-lightgray-ultra-4'>{lookup(arr, 1, 'otherAssets')}</td>
+              <td className='bg-lightgray-ultra-3'>{lookup(arr, 2, 'otherAssets')}</td>
+              <td className='bg-lightgray-ultra-2'>{lookup(arr, 3, 'otherAssets')}</td>
             </tr>
             <tr>
               <td className='green'>Intangible Assets</td>
-              <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].intangibleAssets && parseFloat(arr[0].intangibleAssets).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].intangibleAssets && parseFloat(arr[1].intangibleAssets).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].intangibleAssets && parseFloat(arr[2].intangibleAssets).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].intangibleAssets && parseFloat(arr[3].intangibleAssets).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-5'>{lookup(arr, 0, 'intangibleAssets')}</td>
+              <td className='bg-lightgray-ultra-4'>{lookup(arr, 1, 'intangibleAssets')}</td>
+              <td className='bg-lightgray-ultra-3'>{lookup(arr, 2, 'intangibleAssets')}</td>
+              <td className='bg-lightgray-ultra-2'>{lookup(arr, 3, 'intangibleAssets')}</td>
             </tr>
             <tr>
               <td className='green'>Goodwill</td>
-              <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].goodwill && parseFloat(arr[0].goodwill).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].goodwill && parseFloat(arr[1].goodwill).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].goodwill && parseFloat(arr[2].goodwill).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].goodwill && parseFloat(arr[3].goodwill).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-5'>{lookup(arr, 0, 'goodwill')}</td>
+              <td className='bg-lightgray-ultra-4'>{lookup(arr, 1, 'goodwill')}</td>
+              <td className='bg-lightgray-ultra-3'>{lookup(arr, 2, 'goodwill')}</td>
+              <td className='bg-lightgray-ultra-2'>{lookup(arr, 3, 'goodwill')}</td>
             </tr>
             <tr>
               <td className='green'>Current Assets</td>
-              <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].currentAssets && parseFloat(arr[0].currentAssets).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].currentAssets && parseFloat(arr[1].currentAssets).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].currentAssets && parseFloat(arr[2].currentAssets).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].currentAssets && parseFloat(arr[3].currentAssets).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-5'>{lookup(arr, 0, 'currentAssets')}</td>
+              <td className='bg-lightgray-ultra-4'>{lookup(arr, 1, 'currentAssets')}</td>
+              <td className='bg-lightgray-ultra-3'>{lookup(arr, 2, 'currentAssets')}</td>
+              <td className='bg-lightgray-ultra-2'>{lookup(arr, 3, 'currentAssets')}</td>
             </tr>
             <tr>
               <td className='green'>Current Cash</td>
-              <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].currentCash && parseFloat(arr[0].currentCash).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].currentCash && parseFloat(arr[1].currentCash).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].currentCash && parseFloat(arr[2].currentCash).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].currentCash && parseFloat(arr[3].currentCash).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-5'>{lookup(arr, 0, 'currentCash')}</td>
+              <td className='bg-lightgray-ultra-4'>{lookup(arr, 1, 'currentCash')}</td>
+              <td className='bg-lightgray-ultra-3'>{lookup(arr, 2, 'currentCash')}</td>
+              <td className='bg-lightgray-ultra-2'>{lookup(arr, 3, 'currentCash')}</td>
             </tr>
             <tr>
               <td className='green'>Account Receivables</td>
-              <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].receivables && parseFloat(arr[0].receivables).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].receivables && parseFloat(arr[1].receivables).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].receivables && parseFloat(arr[2].receivables).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].receivables && parseFloat(arr[3].receivables).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-5'>{lookup(arr, 0, 'receivables')}</td>
+              <td className='bg-lightgray-ultra-4'>{lookup(arr, 1, 'receivables')}</td>
+              <td className='bg-lightgray-ultra-3'>{lookup(arr, 2, 'receivables')}</td>
+              <td className='bg-lightgray-ultra-2'>{lookup(arr, 3, 'receivables')}</td>
             </tr>
             <tr>
               <td className='green'>Inventory</td>
-              <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].inventory && parseFloat(arr[0].inventory).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].inventory && parseFloat(arr[1].inventory).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].inventory && parseFloat(arr[2].inventory).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].inventory && parseFloat(arr[3].inventory).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-5'>{lookup(arr, 0, 'inventory')}</td>
+              <td className='bg-lightgray-ultra-4'>{lookup(arr, 1, 'inventory')}</td>
+              <td className='bg-lightgray-ultra-3'>{lookup(arr, 2, 'inventory')}</td>
+              <td className='bg-lightgray-ultra-2'>{lookup(arr, 3, 'inventory')}</td>
             </tr>
             <tr>
               <td className='bold red'>Total Liabilities</td>
-              <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].totalLiabilities && parseFloat(arr[0].totalLiabilities).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].totalLiabilities && parseFloat(arr[1].totalLiabilities).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].totalLiabilities && parseFloat(arr[2].totalLiabilities).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].totalLiabilities && parseFloat(arr[3].totalLiabilities).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-5'>{lookup(arr, 0, 'totalLiabilities')}</td>
+              <td className='bg-lightgray-ultra-4'>{lookup(arr, 1, 'totalLiabilities')}</td>
+              <td className='bg-lightgray-ultra-3'>{lookup(arr, 2, 'totalLiabilities')}</td>
+              <td className='bg-lightgray-ultra-2'>{lookup(arr, 3, 'totalLiabilities')}</td>
             </tr>
             <tr>
               <td className='red'>Account Payables</td>
-              <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].accountsPayable && parseFloat(arr[0].accountsPayable).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].accountsPayable && parseFloat(arr[1].accountsPayable).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].accountsPayable && parseFloat(arr[2].accountsPayable).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].accountsPayable && parseFloat(arr[3].accountsPayable).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-5'>{lookup(arr, 0, 'accountsPayable')}</td>
+              <td className='bg-lightgray-ultra-4'>{lookup(arr, 1, 'accountsPayable')}</td>
+              <td className='bg-lightgray-ultra-3'>{lookup(arr, 2, 'accountsPayable')}</td>
+              <td className='bg-lightgray-ultra-2'>{lookup(arr, 3, 'accountsPayable')}</td>
             </tr>
             <tr>
               <td className='red'>Short Term Debt</td>
-              <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].shortTermDebt && parseFloat(arr[0].shortTermDebt).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].shortTermDebt && parseFloat(arr[1].shortTermDebt).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].shortTermDebt && parseFloat(arr[2].shortTermDebt).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].shortTermDebt && parseFloat(arr[3].shortTermDebt).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-5'>{lookup(arr, 0, 'shortTermDebt')}</td>
+              <td className='bg-lightgray-ultra-4'>{lookup(arr, 1, 'shortTermDebt')}</td>
+              <td className='bg-lightgray-ultra-3'>{lookup(arr, 2, 'shortTermDebt')}</td>
+              <td className='bg-lightgray-ultra-2'>{lookup(arr, 3, 'shortTermDebt')}</td>
             </tr>
             <tr>
               <td className='red'>Long Term Debt</td>
-              <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].longTermDebt && parseFloat(arr[0].longTermDebt).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].longTermDebt && parseFloat(arr[1].longTermDebt).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].longTermDebt && parseFloat(arr[2].longTermDebt).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].longTermDebt && parseFloat(arr[3].longTermDebt).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-5'>{lookup(arr, 0, 'longTermDebt')}</td>
+              <td className='bg-lightgray-ultra-4'>{lookup(arr, 1, 'longTermDebt')}</td>
+              <td className='bg-lightgray-ultra-3'>{lookup(arr, 2, 'longTermDebt')}</td>
+              <td className='bg-lightgray-ultra-2'>{lookup(arr, 3, 'longTermDebt')}</td>
             </tr>
             <tr>
               <td>Current Ratio</td>
-              <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].currentRatio && parseFloat(arr[0].currentRatio).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].currentRatio && parseFloat(arr[1].currentRatio).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].currentRatio && parseFloat(arr[2].currentRatio).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].currentRatio && parseFloat(arr[3].currentRatio).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-5'>{lookup(arr, 0, 'currentRatio')}</td>
+              <td className='bg-lightgray-ultra-4'>{lookup(arr, 1, 'currentRatio')}</td>
+              <td className='bg-lightgray-ultra-3'>{lookup(arr, 2, 'currentRatio')}</td>
+              <td className='bg-lightgray-ultra-2'>{lookup(arr, 3, 'currentRatio')}</td>
             </tr>
             <tr>
               <td>Debt Ratio</td>
-              <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].debtRatio && parseFloat(arr[0].debtRatio).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].debtRatio && parseFloat(arr[1].debtRatio).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].debtRatio && parseFloat(arr[2].debtRatio).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].debtRatio && parseFloat(arr[3].debtRatio).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-5'>{lookup(arr, 0, 'debtRatio')}</td>
+              <td className='bg-lightgray-ultra-4'>{lookup(arr, 1, 'debtRatio')}</td>
+              <td className='bg-lightgray-ultra-3'>{lookup(arr, 2, 'debtRatio')}</td>
+              <td className='bg-lightgray-ultra-2'>{lookup(arr, 3, 'debtRatio')}</td>
             </tr>
             <tr>
               <td>Debt/Equity Ratio</td>
-              <td className='bg-lightgray-ultra-5'>{arr[0] && arr[0].debtToEquityRatio && parseFloat(arr[0].debtToEquityRatio).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-4'>{arr[1] && arr[1].debtToEquityRatio && parseFloat(arr[1].debtToEquityRatio).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-3'>{arr[2] && arr[2].debtToEquityRatio && parseFloat(arr[2].debtToEquityRatio).toFixed(2)}</td>
-              <td className='bg-lightgray-ultra-2'>{arr[3] && arr[3].debtToEquityRatio && parseFloat(arr[3].debtToEquityRatio).toFixed(2)}</td>
+              <td className='bg-lightgray-ultra-5'>{lookup(arr, 0, 'debtToEquityRatio')}</td>
+              <td className='bg-lightgray-ultra-4'>{lookup(arr, 1, 'debtToEquityRatio')}</td>
+              <td className='bg-lightgray-ultra-3'>{lookup(arr, 2, 'debtToEquityRatio')}</td>
+              <td className='bg-lightgray-ultra-2'>{lookup(arr, 3, 'debtToEquityRatio')}</td>
             </tr>
           </tbody>
         </table>

@@ -33,6 +33,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+var lookup = function lookup(arr, idx, prop) {
+  return parseFloat(_lodash["default"].get(arr, "".concat(idx, ".").concat(prop), 0)).toFixed(2);
+};
+
 var Analyst =
 /*#__PURE__*/
 function (_React$Component) {
@@ -207,147 +211,147 @@ function (_React$Component) {
         className: "bold green"
       }, "Total Assets"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, arr[0] && arr[0].totalAssets && parseFloat(arr[0].totalAssets).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 0, 'totalAssets')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, arr[1] && arr[1].totalAssets && parseFloat(arr[1].totalAssets).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 1, 'totalAssets')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, arr[2] && arr[2].totalAssets && parseFloat(arr[2].totalAssets).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 2, 'totalAssets')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].totalAssets && parseFloat(arr[3].totalAssets).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
+      }, lookup(arr, 3, 'totalAssets'))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "green"
       }, "Other Assets"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, arr[0] && arr[0].otherAssets && parseFloat(arr[0].otherAssets).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 0, 'otherAssets')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, arr[1] && arr[1].otherAssets && parseFloat(arr[1].otherAssets).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 1, 'otherAssets')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, arr[2] && arr[2].otherAssets && parseFloat(arr[2].otherAssets).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 2, 'otherAssets')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].otherAssets && parseFloat(arr[3].otherAssets).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
+      }, lookup(arr, 3, 'otherAssets'))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "green"
       }, "Intangible Assets"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, arr[0] && arr[0].intangibleAssets && parseFloat(arr[0].intangibleAssets).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 0, 'intangibleAssets')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, arr[1] && arr[1].intangibleAssets && parseFloat(arr[1].intangibleAssets).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 1, 'intangibleAssets')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, arr[2] && arr[2].intangibleAssets && parseFloat(arr[2].intangibleAssets).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 2, 'intangibleAssets')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].intangibleAssets && parseFloat(arr[3].intangibleAssets).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
+      }, lookup(arr, 3, 'intangibleAssets'))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "green"
       }, "Goodwill"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, arr[0] && arr[0].goodwill && parseFloat(arr[0].goodwill).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 0, 'goodwill')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, arr[1] && arr[1].goodwill && parseFloat(arr[1].goodwill).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 1, 'goodwill')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, arr[2] && arr[2].goodwill && parseFloat(arr[2].goodwill).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 2, 'goodwill')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].goodwill && parseFloat(arr[3].goodwill).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
+      }, lookup(arr, 3, 'goodwill'))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "green"
       }, "Current Assets"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, arr[0] && arr[0].currentAssets && parseFloat(arr[0].currentAssets).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 0, 'currentAssets')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, arr[1] && arr[1].currentAssets && parseFloat(arr[1].currentAssets).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 1, 'currentAssets')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, arr[2] && arr[2].currentAssets && parseFloat(arr[2].currentAssets).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 2, 'currentAssets')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].currentAssets && parseFloat(arr[3].currentAssets).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
+      }, lookup(arr, 3, 'currentAssets'))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "green"
       }, "Current Cash"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, arr[0] && arr[0].currentCash && parseFloat(arr[0].currentCash).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 0, 'currentCash')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, arr[1] && arr[1].currentCash && parseFloat(arr[1].currentCash).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 1, 'currentCash')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, arr[2] && arr[2].currentCash && parseFloat(arr[2].currentCash).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 2, 'currentCash')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].currentCash && parseFloat(arr[3].currentCash).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
+      }, lookup(arr, 3, 'currentCash'))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "green"
       }, "Account Receivables"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, arr[0] && arr[0].receivables && parseFloat(arr[0].receivables).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 0, 'receivables')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, arr[1] && arr[1].receivables && parseFloat(arr[1].receivables).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 1, 'receivables')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, arr[2] && arr[2].receivables && parseFloat(arr[2].receivables).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 2, 'receivables')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].receivables && parseFloat(arr[3].receivables).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
+      }, lookup(arr, 3, 'receivables'))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "green"
       }, "Inventory"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, arr[0] && arr[0].inventory && parseFloat(arr[0].inventory).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 0, 'inventory')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, arr[1] && arr[1].inventory && parseFloat(arr[1].inventory).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 1, 'inventory')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, arr[2] && arr[2].inventory && parseFloat(arr[2].inventory).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 2, 'inventory')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].inventory && parseFloat(arr[3].inventory).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
+      }, lookup(arr, 3, 'inventory'))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "bold red"
       }, "Total Liabilities"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, arr[0] && arr[0].totalLiabilities && parseFloat(arr[0].totalLiabilities).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 0, 'totalLiabilities')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, arr[1] && arr[1].totalLiabilities && parseFloat(arr[1].totalLiabilities).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 1, 'totalLiabilities')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, arr[2] && arr[2].totalLiabilities && parseFloat(arr[2].totalLiabilities).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 2, 'totalLiabilities')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].totalLiabilities && parseFloat(arr[3].totalLiabilities).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
+      }, lookup(arr, 3, 'totalLiabilities'))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "red"
       }, "Account Payables"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, arr[0] && arr[0].accountsPayable && parseFloat(arr[0].accountsPayable).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 0, 'accountsPayable')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, arr[1] && arr[1].accountsPayable && parseFloat(arr[1].accountsPayable).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 1, 'accountsPayable')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, arr[2] && arr[2].accountsPayable && parseFloat(arr[2].accountsPayable).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 2, 'accountsPayable')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].accountsPayable && parseFloat(arr[3].accountsPayable).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
+      }, lookup(arr, 3, 'accountsPayable'))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "red"
       }, "Short Term Debt"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, arr[0] && arr[0].shortTermDebt && parseFloat(arr[0].shortTermDebt).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 0, 'shortTermDebt')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, arr[1] && arr[1].shortTermDebt && parseFloat(arr[1].shortTermDebt).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 1, 'shortTermDebt')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, arr[2] && arr[2].shortTermDebt && parseFloat(arr[2].shortTermDebt).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 2, 'shortTermDebt')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].shortTermDebt && parseFloat(arr[3].shortTermDebt).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
+      }, lookup(arr, 3, 'shortTermDebt'))), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "red"
       }, "Long Term Debt"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, arr[0] && arr[0].longTermDebt && parseFloat(arr[0].longTermDebt).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 0, 'longTermDebt')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, arr[1] && arr[1].longTermDebt && parseFloat(arr[1].longTermDebt).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 1, 'longTermDebt')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, arr[2] && arr[2].longTermDebt && parseFloat(arr[2].longTermDebt).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 2, 'longTermDebt')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].longTermDebt && parseFloat(arr[3].longTermDebt).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", null, "Current Ratio"), _react["default"].createElement("td", {
+      }, lookup(arr, 3, 'longTermDebt'))), _react["default"].createElement("tr", null, _react["default"].createElement("td", null, "Current Ratio"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, arr[0] && arr[0].currentRatio && parseFloat(arr[0].currentRatio).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 0, 'currentRatio')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, arr[1] && arr[1].currentRatio && parseFloat(arr[1].currentRatio).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 1, 'currentRatio')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, arr[2] && arr[2].currentRatio && parseFloat(arr[2].currentRatio).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 2, 'currentRatio')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].currentRatio && parseFloat(arr[3].currentRatio).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", null, "Debt Ratio"), _react["default"].createElement("td", {
+      }, lookup(arr, 3, 'currentRatio'))), _react["default"].createElement("tr", null, _react["default"].createElement("td", null, "Debt Ratio"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, arr[0] && arr[0].debtRatio && parseFloat(arr[0].debtRatio).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 0, 'debtRatio')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, arr[1] && arr[1].debtRatio && parseFloat(arr[1].debtRatio).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 1, 'debtRatio')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, arr[2] && arr[2].debtRatio && parseFloat(arr[2].debtRatio).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 2, 'debtRatio')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].debtRatio && parseFloat(arr[3].debtRatio).toFixed(2))), _react["default"].createElement("tr", null, _react["default"].createElement("td", null, "Debt/Equity Ratio"), _react["default"].createElement("td", {
+      }, lookup(arr, 3, 'debtRatio'))), _react["default"].createElement("tr", null, _react["default"].createElement("td", null, "Debt/Equity Ratio"), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-5"
-      }, arr[0] && arr[0].debtToEquityRatio && parseFloat(arr[0].debtToEquityRatio).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 0, 'debtToEquityRatio')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-4"
-      }, arr[1] && arr[1].debtToEquityRatio && parseFloat(arr[1].debtToEquityRatio).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 1, 'debtToEquityRatio')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-3"
-      }, arr[2] && arr[2].debtToEquityRatio && parseFloat(arr[2].debtToEquityRatio).toFixed(2)), _react["default"].createElement("td", {
+      }, lookup(arr, 2, 'debtToEquityRatio')), _react["default"].createElement("td", {
         className: "bg-lightgray-ultra-2"
-      }, arr[3] && arr[3].debtToEquityRatio && parseFloat(arr[3].debtToEquityRatio).toFixed(2))))), _react["default"].createElement("div", {
+      }, lookup(arr, 3, 'debtToEquityRatio'))))), _react["default"].createElement("div", {
         style: {
           fontSize: 8,
           color: 'gray'
