@@ -112,8 +112,8 @@ export class Analyst extends React.Component {
     const arr = data.slice(-4);
 
     return (
-      <div style={{ width: '100%', padding: 5, fontSize: 8 }}>
-        <div style={{ color: 'darkred', fontWeight: 'bold', marginBottom: 5, fontSize: 8 }}>{profile.ticker} - {profile.name}<span style={{ color: 'green', marginLeft: 3 }}>Balance Sheets</span></div>
+      <div style={{ width: '100%', padding: 5, fontSize: 7 }}>
+        <div style={{ color: 'darkred', fontWeight: 'bold', marginBottom: 5, fontSize: 7 }}>{profile.ticker} - {profile.name}<span style={{ color: 'green', marginLeft: 3 }}>Balance Sheets</span></div>
         <table className='table table-sm' style={{ marginBottom: 0 }}>
           <thead className='bold'>
             <th className='left lighter'>Unit: ({unit})</th>
