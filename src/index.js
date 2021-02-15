@@ -51,19 +51,20 @@ export class Analyst extends React.Component {
       let unit = 'thousand';
       let u = 'k';
       if (!data || !data.length) return data;
-      if (data[0].ta > 10000000) {
+      data = _.sortBy(data.filter(d => d.reportDate), (d) => {
+        return d.reportDate;
+      });
+      if (data[data.length - 1].ta > 2000000) {
         divider = 1000000;
         unit = 'milllion';
         u = 'm';
       }
-      if (data[0].ta > 10000000000) {
+      if (data[data.length - 1].ta > 2000000000) {
         divider = 1000000000;
         unit = 'billion';
         u = 'b';
       }
-      data = _.sortBy(data.filter(d => d.reportDate), (d) => {
-        return d.reportDate;
-      });
+
 
       return data.map((d, i) => {
         const qq = ~~d.reportDate.slice(5, 7);

@@ -111,24 +111,24 @@ function (_React$Component) {
         var unit = 'thousand';
         var u = 'k';
         if (!data || !data.length) return data;
-
-        if (data[0].ta > 10000000) {
-          divider = 1000000;
-          unit = 'milllion';
-          u = 'm';
-        }
-
-        if (data[0].ta > 10000000000) {
-          divider = 1000000000;
-          unit = 'billion';
-          u = 'b';
-        }
-
         data = _lodash["default"].sortBy(data.filter(function (d) {
           return d.reportDate;
         }), function (d) {
           return d.reportDate;
         });
+
+        if (data[data.length - 1].ta > 2000000) {
+          divider = 1000000;
+          unit = 'milllion';
+          u = 'm';
+        }
+
+        if (data[data.length - 1].ta > 2000000000) {
+          divider = 1000000000;
+          unit = 'billion';
+          u = 'b';
+        }
+
         return data.map(function (d, i) {
           var qq = ~~d.reportDate.slice(5, 7);
           var yy = d.reportDate.slice(0, 4);
