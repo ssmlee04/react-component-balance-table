@@ -109,72 +109,72 @@ export class Analyst extends React.Component {
 
     const data = calculateBalanceSheets(_.get(profile, `${prop}.data`, []));
     const unit = _.get(data, '0.unit') || 'million';
-    const arr = data.slice(count * -1);
+    const arr = data.slice(count * -1) || [];
 
     return (
       <div style={{ width: '100%', padding: 5, fontSize: 12 }}>
         <div style={{ color: 'darkred', fontWeight: 'bold', marginBottom: 5, fontSize: 12 }}>{profile.ticker} - {profile.name}<span style={{ color: 'green', marginLeft: 3 }}>Balance Sheets</span></div>
-        <table className='table table-sm' style={{ marginBottom: 0 }}>
+        <table className='table table-sm' style={{ marginBottom: 0, fontSize: 10 }}>
           <thead className='bold'>
             <th className='left lighter'>Unit: ({unit})</th>
-            {_.range(count).map(d => <th key={d} className={`bg-lightgray-ul-${d} hov`}>{arr[d] && arr[d].quarterStr}</th>)}
+            {_.range(arr.length).map(d => <th key={d} className={`bg-lightgray-ul-${d} hov`}>{arr[d] && arr[d].quarterStr}</th>)}
           </thead>
           <tbody>
             <tr>
               <td className='bold green'>Total Assets</td>
-              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'totalAssets')}</td>)}
+              {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'totalAssets')}</td>)}
             </tr>
             <tr>
               <td className='green'>Intangible Assets</td>
-              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'intangibleAssets')}</td>)}
+              {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'intangibleAssets')}</td>)}
             </tr>
             <tr>
               <td className='green'>Goodwill</td>
-              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'goodwill')}</td>)}
+              {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'goodwill')}</td>)}
             </tr>
             <tr>
               <td className='green'>Current Assets</td>
-              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'currentAssets')}</td>)}
+              {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'currentAssets')}</td>)}
             </tr>
             <tr>
               <td className='green'>Current Cash</td>
-              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'currentCash')}</td>)}
+              {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'currentCash')}</td>)}
             </tr>
             <tr>
               <td className='green'>Account Receivables</td>
-              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'receivables')}</td>)}
+              {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'receivables')}</td>)}
             </tr>
             <tr>
               <td className='green'>Inventory</td>
-              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'inventory')}</td>)}
+              {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'inventory')}</td>)}
             </tr>
             <tr>
               <td className='bold red'>Total Liabilities</td>
-              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'totalLiabilities')}</td>)}
+              {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'totalLiabilities')}</td>)}
             </tr>
             <tr>
               <td className='red'>Account Payables</td>
-              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'accountsPayable')}</td>)}
+              {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'accountsPayable')}</td>)}
             </tr>
             <tr>
               <td className='red'>Short Term Debt</td>
-              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'shortTermDebt')}</td>)}
+              {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'shortTermDebt')}</td>)}
             </tr>
             <tr>
               <td className='red'>Long Term Debt</td>
-              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'longTermDebt')}</td>)}
+              {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'longTermDebt')}</td>)}
             </tr>
             <tr>
               <td>Current Ratio</td>
-              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'currentRatio')}</td>)}
+              {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'currentRatio')}</td>)}
             </tr>
             <tr>
               <td>Debt Ratio</td>
-              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'debtRatio')}</td>)}
+              {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'debtRatio')}</td>)}
             </tr>
             <tr>
               <td>Debt/Equity Ratio</td>
-              {_.range(count).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'debtToEquityRatio')}</td>)}
+              {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'debtToEquityRatio')}</td>)}
             </tr>
           </tbody>
         </table>

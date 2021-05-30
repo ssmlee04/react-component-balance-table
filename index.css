@@ -15,7 +15,7 @@ div.react-components-show-button button.react-components-show-url {
     top: 2px;
     right: 2px;
 }
-.bg-lightgray-ultra-2 {
+/*.bg-lightgray-ultra-2 {
   background-color: #ebebeb;
 }
 .bg-lightgray-ultra-3 {
@@ -26,7 +26,7 @@ div.react-components-show-button button.react-components-show-url {
 }
 .bg-lightgray-ultra-5 {
   background-color: #fafafa;
-}
+}*/
 .bold {
   font-weight: bold;
 }
@@ -38,4 +38,7 @@ div.react-components-show-button button.react-components-show-url {
 }
 .crimson {
   color: crimson;
+}
+.hov:hover {
+  background-color: rgba(0, 0, 128, 0.05);
 }
