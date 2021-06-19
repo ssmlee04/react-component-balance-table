@@ -51,15 +51,6 @@ function (_React$Component) {
   }
 
   _createClass(Analyst, [{
-    key: "shouldComponentUpdate",
-    value: function shouldComponentUpdate(nextProps, nextState) {
-      var profile = this.props.profile;
-      if (!profile) return true;
-      if (nextState.copied) return true;
-      if (profile.ticker !== nextProps.profile.ticker) return true;
-      return false;
-    }
-  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
@@ -71,7 +62,9 @@ function (_React$Component) {
           _this$props$imgProp = _this$props.imgProp,
           imgProp = _this$props$imgProp === void 0 ? 'balance_table' : _this$props$imgProp,
           _this$props$count = _this$props.count,
-          count = _this$props$count === void 0 ? 4 : _this$props$count;
+          count = _this$props$count === void 0 ? 4 : _this$props$count,
+          _this$props$theme = _this$props.theme,
+          theme = _this$props$theme === void 0 ? 'light' : _this$props$theme;
       var copied = this.state.copied;
 
       if (!profile) {
@@ -175,22 +168,17 @@ function (_React$Component) {
       return _react["default"].createElement("div", {
         style: {
           width: '100%',
-          padding: 5,
-          fontSize: 12
-        }
+          padding: 5
+        },
+        className: "theme-black-".concat(theme)
       }, _react["default"].createElement("div", {
+        className: "theme-darkred-".concat(theme),
         style: {
-          color: 'darkred',
-          fontWeight: 'bold',
-          marginBottom: 5,
-          fontSize: 12
+          fontWeight: 'bold'
         }
-      }, profile.ticker, " - ", profile.name, _react["default"].createElement("span", {
-        style: {
-          color: 'green',
-          marginLeft: 3
-        }
-      }, "Balance Sheets")), _react["default"].createElement("table", {
+      }, profile.ticker, " - ", profile.name, "\xA0", _react["default"].createElement("span", {
+        className: "theme-green-".concat(theme)
+      }, "Balance Sheet")), _react["default"].createElement("table", {
         className: "table table-sm",
         style: {
           marginBottom: 0,
@@ -206,77 +194,77 @@ function (_React$Component) {
           className: "bg-lightgray-ul-".concat(d, " hov")
         }, arr[d] && arr[d].quarterStr);
       })), _react["default"].createElement("tbody", null, _react["default"].createElement("tr", null, _react["default"].createElement("td", {
-        className: "bold green"
+        className: "bold theme-green-".concat(theme)
       }, "Total Assets"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
           className: "bg-lightgray-ul-".concat(d, " hov lighter")
         }, lookup(arr, d, 'totalAssets'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
-        className: "green"
+        className: "theme-green-".concat(theme)
       }, "Intangible Assets"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
           className: "bg-lightgray-ul-".concat(d, " hov lighter")
         }, lookup(arr, d, 'intangibleAssets'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
-        className: "green"
+        className: "theme-green-".concat(theme)
       }, "Goodwill"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
           className: "bg-lightgray-ul-".concat(d, " hov lighter")
         }, lookup(arr, d, 'goodwill'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
-        className: "green"
+        className: "theme-green-".concat(theme)
       }, "Current Assets"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
           className: "bg-lightgray-ul-".concat(d, " hov lighter")
         }, lookup(arr, d, 'currentAssets'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
-        className: "green"
+        className: "theme-green-".concat(theme)
       }, "Current Cash"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
           className: "bg-lightgray-ul-".concat(d, " hov lighter")
         }, lookup(arr, d, 'currentCash'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
-        className: "green"
+        className: "theme-green-".concat(theme)
       }, "Account Receivables"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
           className: "bg-lightgray-ul-".concat(d, " hov lighter")
         }, lookup(arr, d, 'receivables'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
-        className: "green"
+        className: "theme-green-".concat(theme)
       }, "Inventory"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
           className: "bg-lightgray-ul-".concat(d, " hov lighter")
         }, lookup(arr, d, 'inventory'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
-        className: "bold red"
+        className: "bold theme-red-".concat(theme)
       }, "Total Liabilities"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
           className: "bg-lightgray-ul-".concat(d, " hov lighter")
         }, lookup(arr, d, 'totalLiabilities'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
-        className: "red"
+        className: "theme-red-".concat(theme)
       }, "Account Payables"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
           className: "bg-lightgray-ul-".concat(d, " hov lighter")
         }, lookup(arr, d, 'accountsPayable'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
-        className: "red"
+        className: "theme-red-".concat(theme)
       }, "Short Term Debt"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
           className: "bg-lightgray-ul-".concat(d, " hov lighter")
         }, lookup(arr, d, 'shortTermDebt'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
-        className: "red"
+        className: "theme-red-".concat(theme)
       }, "Long Term Debt"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
@@ -300,12 +288,13 @@ function (_React$Component) {
       })))), _react["default"].createElement("div", {
         style: {
           fontSize: 12,
-          color: 'gray'
+          padding: 5,
+          paddingTop: 2
         }
-      }, "Generated by ", _react["default"].createElement("span", {
-        style: {
-          color: 'darkred'
-        }
+      }, "Generated by ", _react["default"].createElement("a", {
+        href: "https://twitter.com/earningsfly",
+        target: "_blank",
+        className: "theme-darkred-".concat(theme)
       }, "@earningsfly"), " with ", _react["default"].createElement("span", {
         style: {
           fontSize: 16,

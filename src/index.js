@@ -15,16 +15,8 @@ export class Analyst extends React.Component {
     };
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    const { profile } = this.props;
-    if (!profile) return true;
-    if (nextState.copied) return true;
-    if (profile.ticker !== nextProps.profile.ticker) return true;
-    return false;
-  }
-
   render() {
-    const { profile, prop = 'balance_sheet', imgProp = 'balance_table', count = 4 } = this.props;
+    const { profile, prop = 'balance_sheet', imgProp = 'balance_table', count = 4, theme = 'light' } = this.props;
     const { copied } = this.state;
     if (!profile) {
       return (
@@ -112,8 +104,8 @@ export class Analyst extends React.Component {
     const arr = data.slice(count * -1) || [];
 
     return (
-      <div style={{ width: '100%', padding: 5, fontSize: 12 }}>
-        <div style={{ color: 'darkred', fontWeight: 'bold', marginBottom: 5, fontSize: 12 }}>{profile.ticker} - {profile.name}<span style={{ color: 'green', marginLeft: 3 }}>Balance Sheets</span></div>
+      <div style={{ width: '100%', padding: 5 }} className={`theme-black-${theme}`}>
+        <div className={`theme-darkred-${theme}`} style={{ fontWeight: 'bold' }}>{profile.ticker} - {profile.name}&nbsp;<span className={`theme-green-${theme}`}>Balance Sheet</span></div>
         <table className='table table-sm' style={{ marginBottom: 0, fontSize: 10 }}>
           <thead className='bold'>
             <th className='left lighter'>Unit: ({unit})</th>
@@ -121,47 +113,47 @@ export class Analyst extends React.Component {
           </thead>
           <tbody>
             <tr>
-              <td className='bold green'>Total Assets</td>
+              <td className={`bold theme-green-${theme}`}>Total Assets</td>
               {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'totalAssets')}</td>)}
             </tr>
             <tr>
-              <td className='green'>Intangible Assets</td>
+              <td className={`theme-green-${theme}`}>Intangible Assets</td>
               {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'intangibleAssets')}</td>)}
             </tr>
             <tr>
-              <td className='green'>Goodwill</td>
+              <td className={`theme-green-${theme}`}>Goodwill</td>
               {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'goodwill')}</td>)}
             </tr>
             <tr>
-              <td className='green'>Current Assets</td>
+              <td className={`theme-green-${theme}`}>Current Assets</td>
               {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'currentAssets')}</td>)}
             </tr>
             <tr>
-              <td className='green'>Current Cash</td>
+              <td className={`theme-green-${theme}`}>Current Cash</td>
               {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'currentCash')}</td>)}
             </tr>
             <tr>
-              <td className='green'>Account Receivables</td>
+              <td className={`theme-green-${theme}`}>Account Receivables</td>
               {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'receivables')}</td>)}
             </tr>
             <tr>
-              <td className='green'>Inventory</td>
+              <td className={`theme-green-${theme}`}>Inventory</td>
               {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'inventory')}</td>)}
             </tr>
             <tr>
-              <td className='bold red'>Total Liabilities</td>
+              <td className={`bold theme-red-${theme}`}>Total Liabilities</td>
               {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'totalLiabilities')}</td>)}
             </tr>
             <tr>
-              <td className='red'>Account Payables</td>
+              <td className={`theme-red-${theme}`}>Account Payables</td>
               {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'accountsPayable')}</td>)}
             </tr>
             <tr>
-              <td className='red'>Short Term Debt</td>
+              <td className={`theme-red-${theme}`}>Short Term Debt</td>
               {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'shortTermDebt')}</td>)}
             </tr>
             <tr>
-              <td className='red'>Long Term Debt</td>
+              <td className={`theme-red-${theme}`}>Long Term Debt</td>
               {_.range(arr.length).map(d => <td key={d} className={`bg-lightgray-ul-${d} hov lighter`}>{lookup(arr, d, 'longTermDebt')}</td>)}
             </tr>
             <tr>
@@ -178,7 +170,7 @@ export class Analyst extends React.Component {
             </tr>
           </tbody>
         </table>
-        <div style={{ fontSize: 12, color: 'gray' }}>Generated by <span style={{ color: 'darkred' }}>@earningsfly</span> with <span style={{ fontSize: 16, color: 'red' }}>❤️</span></div>
+        <div style={{ fontSize: 12, padding: 5, paddingTop: 2 }}>Generated by <a href='https://twitter.com/earningsfly' target='_blank' className={`theme-darkred-${theme}`}>@earningsfly</a> with <span style={{ fontSize: 16, color: 'red' }}>❤️</span></div>
       </div>
     );
   }
