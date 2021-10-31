@@ -187,7 +187,7 @@ function (_React$Component) {
       }, _react["default"].createElement("thead", {
         className: "bold"
       }, _react["default"].createElement("th", {
-        className: "left lighter"
+        className: "left"
       }, "Unit: (", unit, ")"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("th", {
           key: d,
@@ -198,92 +198,92 @@ function (_React$Component) {
       }, "Total Assets"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+          className: "bg-lightgray-ul-".concat(d, " hov")
         }, lookup(arr, d, 'totalAssets'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "theme-green-".concat(theme)
       }, "Intangible Assets"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+          className: "bg-lightgray-ul-".concat(d, " hov")
         }, lookup(arr, d, 'intangibleAssets'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "theme-green-".concat(theme)
       }, "Goodwill"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+          className: "bg-lightgray-ul-".concat(d, " hov")
         }, lookup(arr, d, 'goodwill'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "theme-green-".concat(theme)
       }, "Current Assets"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+          className: "bg-lightgray-ul-".concat(d, " hov")
         }, lookup(arr, d, 'currentAssets'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "theme-green-".concat(theme)
       }, "Current Cash"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+          className: "bg-lightgray-ul-".concat(d, " hov")
         }, lookup(arr, d, 'currentCash'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "theme-green-".concat(theme)
       }, "Account Receivables"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+          className: "bg-lightgray-ul-".concat(d, " hov")
         }, lookup(arr, d, 'receivables'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "theme-green-".concat(theme)
       }, "Inventory"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+          className: "bg-lightgray-ul-".concat(d, " hov")
         }, lookup(arr, d, 'inventory'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "bold theme-red-".concat(theme)
       }, "Total Liabilities"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+          className: "bg-lightgray-ul-".concat(d, " hov")
         }, lookup(arr, d, 'totalLiabilities'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "theme-red-".concat(theme)
       }, "Account Payables"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+          className: "bg-lightgray-ul-".concat(d, " hov")
         }, lookup(arr, d, 'accountsPayable'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "theme-red-".concat(theme)
       }, "Short Term Debt"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+          className: "bg-lightgray-ul-".concat(d, " hov")
         }, lookup(arr, d, 'shortTermDebt'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "theme-red-".concat(theme)
       }, "Long Term Debt"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+          className: "bg-lightgray-ul-".concat(d, " hov")
         }, lookup(arr, d, 'longTermDebt'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", null, "Current Ratio"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+          className: "bg-lightgray-ul-".concat(d, " hov")
         }, lookup(arr, d, 'currentRatio'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", null, "Debt Ratio"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+          className: "bg-lightgray-ul-".concat(d, " hov")
         }, lookup(arr, d, 'debtRatio'));
       })), _react["default"].createElement("tr", null, _react["default"].createElement("td", null, "Debt/Equity Ratio"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
           key: d,
-          className: "bg-lightgray-ul-".concat(d, " hov lighter")
+          className: "bg-lightgray-ul-".concat(d, " hov")
         }, lookup(arr, d, 'debtToEquityRatio'));
       })))), _react["default"].createElement("div", {
         style: {
