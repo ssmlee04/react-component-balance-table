@@ -7,7 +7,7 @@ const lookup = (arr, idx, prop) => {
   return parseFloat(_.get(arr, `${idx}.${prop}`, 0)).toFixed(2);
 };
 
-export class Analyst extends React.Component {
+export class BalanceTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -108,8 +108,10 @@ export class Analyst extends React.Component {
         <div className={`theme-darkred-${theme} mb-2`} style={{ fontWeight: 'bold' }}>{profile.ticker} - {profile.name}&nbsp;<span className={`theme-green-${theme}`}>Balance Sheet</span></div>
         <table className='table table-sm' style={{ marginBottom: 0, fontSize: 10 }}>
           <thead className='bold'>
-            <th className='left'>Unit: ({unit})</th>
-            {_.range(arr.length).map(d => <th key={d} className={`bg-lightgray-ul-${d} hov`}>{arr[d] && arr[d].quarterStr}</th>)}
+            <tr>
+              <th className='left'>Unit: ({unit})</th>
+              {_.range(arr.length).map(d => <th key={d} className={`bg-lightgray-ul-${d} hov`}>{arr[d] && arr[d].quarterStr}</th>)}
+            </tr>
           </thead>
           <tbody>
             <tr>
@@ -176,4 +178,4 @@ export class Analyst extends React.Component {
   }
 }
 
-export default Analyst;
+export default BalanceTable;

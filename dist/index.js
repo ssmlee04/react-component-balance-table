@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = exports.Analyst = void 0;
+exports["default"] = exports.BalanceTable = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -35,22 +35,22 @@ var lookup = function lookup(arr, idx, prop) {
   return parseFloat(_lodash["default"].get(arr, "".concat(idx, ".").concat(prop), 0)).toFixed(2);
 };
 
-var Analyst =
+var BalanceTable =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(Analyst, _React$Component);
+  _inherits(BalanceTable, _React$Component);
 
-  function Analyst(props) {
+  function BalanceTable(props) {
     var _this;
 
-    _classCallCheck(this, Analyst);
+    _classCallCheck(this, BalanceTable);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Analyst).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(BalanceTable).call(this, props));
     _this.state = {};
     return _this;
   }
 
-  _createClass(Analyst, [{
+  _createClass(BalanceTable, [{
     key: "render",
     value: function render() {
       var _this2 = this;
@@ -186,14 +186,14 @@ function (_React$Component) {
         }
       }, _react["default"].createElement("thead", {
         className: "bold"
-      }, _react["default"].createElement("th", {
+      }, _react["default"].createElement("tr", null, _react["default"].createElement("th", {
         className: "left"
       }, "Unit: (", unit, ")"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("th", {
           key: d,
           className: "bg-lightgray-ul-".concat(d, " hov")
         }, arr[d] && arr[d].quarterStr);
-      })), _react["default"].createElement("tbody", null, _react["default"].createElement("tr", null, _react["default"].createElement("td", {
+      }))), _react["default"].createElement("tbody", null, _react["default"].createElement("tr", null, _react["default"].createElement("td", {
         className: "bold theme-green-".concat(theme)
       }, "Total Assets"), _lodash["default"].range(arr.length).map(function (d) {
         return _react["default"].createElement("td", {
@@ -304,9 +304,9 @@ function (_React$Component) {
     }
   }]);
 
-  return Analyst;
+  return BalanceTable;
 }(_react["default"].Component);
 
-exports.Analyst = Analyst;
-var _default = Analyst;
+exports.BalanceTable = BalanceTable;
+var _default = BalanceTable;
 exports["default"] = _default;
